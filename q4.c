@@ -1,23 +1,35 @@
 #include <stdio.h>
-#include <math.h>
 
 int main(){
 
-    float l1,l2,l3;
+    int n1,n2,n3;
 
-    printf("Digite o primeiro lado1: ");
-    scanf("%f", & l1);
+    printf("Digite o de n1: ");
+    scanf("%d", & n1);
 
-    printf("Digite o primeiro lado2: ");
-    scanf("%f", & l2);
+    printf("Digite o de n2: ");
+    scanf("%d", & n2);
 
-    printf("Digite o primeiro lado3;: ");
-    scanf("%f", & l3);
+    printf("Digite o de n3: ");
+    scanf("%d", & n3);
 
+    if(n2 + n3 < n1 || n1 + n3 < n2 || n1 + n2 < n3){
+        printf("NAO existe triangulo! ");
+        return 0;
+    }
+    if(n1 == n2 && n1 == n3){
+        printf("Triangulo equilatero");
+        return 0;
+    }
 
-    printf("Valor de l1: %.2f / l2: %.2f / l3: %.2f",l1,l2,l3);
+    if(n1 == n2 || n1 == n3 || n2 == n3){
+        printf("Triangulo Isoceles ");
+        return 0;
+    }
 
-
+    else{
+        printf("Triangulo Escaleno!");
+    }
 
     return 0;
 }
